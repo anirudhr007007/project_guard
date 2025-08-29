@@ -78,7 +78,7 @@ def main():
         writer.writeheader()
 
         for row in reader:
-            record_id, redacted_json, is_pii = process_record(row["record_id"], row["Data_json"])
+            record_id, redacted_json, is_pii = process_record(row["record_id"], row["data_json"])
             writer.writerow({
                 "record_id": record_id,
                 "redacted_data_json": redacted_json,
